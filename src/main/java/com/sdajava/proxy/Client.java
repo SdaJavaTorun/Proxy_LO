@@ -1,9 +1,14 @@
 package com.sdajava.proxy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by lukas on 11.04.2017.
  */
 public class Client implements User{
+
+    List<Client> listOfClients = new ArrayList<Client>();
 
     private String name;
     private String lastname;
@@ -26,7 +31,7 @@ public class Client implements User{
     }
 
     public void save() {
-        //zapis
+        listOfClients.add(this);
     }
 
     public void delete() {
